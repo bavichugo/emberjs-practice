@@ -1,0 +1,14 @@
+{{page-title 'UserProfile'}}
+
+<div class='center-layout'>
+  <div class='card'>
+    <h1>{{@model.login}}</h1>
+    <ul>
+      {{#each @model.repoList as |repo|}}
+        <li>{{repo.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+{{outlet}}

@@ -1,0 +1,20 @@
+{{page-title 'GithubProfileSearcher'}}
+
+<div class='center-layout'>
+  <div class='card'>
+    <span class='title'>Github Profile Searcher</span>
+  </div>
+  <div class='card'>
+    <form {{on 'submit' this.searchUser}}>
+      <div class='center-layout'>
+        <Input
+          class='form-input-text'
+          id='username'
+          type='text'
+          {{on 'input' this.setUsername}}
+        />
+        <button class='form-button' type='submit'>Search User</button>
+      </div>
+    </form>
+  </div>
+</div>
