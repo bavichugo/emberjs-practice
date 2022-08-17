@@ -1,0 +1,35 @@
+@import './variables';
+
+.trivia-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+
+    label {
+        font-size: medium;
+        margin-bottom: 1rem;
+    }
+
+    label, input, select {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input, select, button {
+        font-size: large;
+        padding: 8px;
+        border-radius: 5px;
+        border-style: none;
+    }
+
+    button {
+        background-color: $green-bright;
+
+        &:hover {
+            background-color: $green-bright-hover;
+            cursor: pointer;
+        }
+    }
+}

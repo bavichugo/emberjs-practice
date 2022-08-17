@@ -1,0 +1,21 @@
+<form class='trivia-form' {{on 'submit' this.submitHandler}}>
+  <label>
+    Number of Questions:
+    <Input @value={{this.numberOfQuestions}} />
+  </label>
+
+  <label for='difficulty'>Choose a difficulty:
+    <select
+      id='difficulty'
+      name='difficulty'
+      {{on 'input' this.difficultyInputHandler}}
+    >
+      <option value='random'>Random</option>
+      <option value='easy'>Easy</option>
+      <option value='medium'>Medium</option>
+      <option value='hard'>Hard</option>
+    </select>
+  </label>
+
+  <button type='submit'>Start Game</button>
+</form>

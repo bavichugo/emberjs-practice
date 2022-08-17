@@ -1,0 +1,12 @@
+@import './application';
+@import './variables';
+@import './nav-bar';
+@import './index';
+@import './trivia-form';
+@import './trivia-game-question';
+
+html, body {
+    margin: 0;
+    background-color: $black-ground;
+    font-family: 'Inter', sans-serif    ;
+}

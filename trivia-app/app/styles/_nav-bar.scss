@@ -1,0 +1,24 @@
+@import './variables';
+
+.nav-bar-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-bright;
+    margin: 0;
+}
+
+.nav-bar-inner-container {
+    background-color: $green-bright;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0;
+    padding: 1rem;
+
+    h1 {
+        margin: 0;
+        color: black;
+    }
+}
