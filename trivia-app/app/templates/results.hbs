@@ -1,0 +1,12 @@
+{{page-title 'Results'}}
+<div class='results'>
+  <h1 class='white-card'>Results</h1>
+  <h2 class='white-card'>Correct Answers:
+    {{@model.correctAnswers}}
+    /
+    {{@model.totalQuestions}}
+  </h2>
+  <LinkTo class='white-border' @route='index' {{on 'click' this.resetGameInfo}}>
+    Menu
+  </LinkTo>
+</div>

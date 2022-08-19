@@ -21,6 +21,7 @@ export default class TriviaRoute extends Route {
     shuffleArray(options);
     const finalObj = {
       ...data,
+      question: data.question.replaceAll('&quot;', '"'),
       options,
     };
 

@@ -1,0 +1,37 @@
+@import './variables';
+
+.results {
+    background-color: $green-bright;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    .white-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .white-border {
+        border-color: white;
+        border-width: 3px;
+        border-radius: 10px;
+        border-style: solid;
+        padding: 0.5rem;
+        color: black;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: rgb(236, 236, 236);
+            cursor: pointer;
+        }
+    }
+}

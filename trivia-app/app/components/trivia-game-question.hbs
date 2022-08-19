@@ -1,4 +1,13 @@
 <div class='trivia-game-question-container'>
-
+  <h1 class='white-card'>{{@model.category}}</h1>
+  <h2 class='white-card'><b>Question:</b> {{@model.question}}</h2>
+  <h3 class='white-card'>Select your answer:</h3>
+  <ul>
+    {{#each @model.options as |option|}}
+      <li
+        class='white-border'
+        {{on 'click' this.answerClickedHandler}}
+      >{{option}}</li>
+    {{/each}}
+  </ul>
 </div>
-<h1>{{@model.category}}</h1>

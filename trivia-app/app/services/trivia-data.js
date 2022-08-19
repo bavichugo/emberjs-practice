@@ -1,12 +1,15 @@
 import Service from '@ember/service';
-import { tracked } from '@glimmer/tracking';
+import { service } from '@ember/service';
 
 export default class TriviaDataService extends Service {
+  @service router;
+
   questionCounter = 0;
   questions = [];
   correctAnswers = 0;
+  totalQuestions = 0;
 
-  async setQuestions(api) {
+  async setQuestions(api, totalQuestions) {
     const response = await fetch(api);
     if (!response) {
       console.log('Could not obtain data from the API');
@@ -19,7 +22,28 @@ export default class TriviaDataService extends Service {
       return;
     }
 
+    this.totalQuestions = totalQuestions;
     this.questions = data.results;
-    console.log(this.questions);
+  }
+
+  updateAnswerAndCount(userAnswer, correctAnswer) {
+    if (userAnswer === correctAnswer) {
+      this.correctAnswers += 1;
+    }
+    this.questionCounter += 1;
+
+    console.log(this.questionCounter, this.totalQuestions);
+    if (+this.questionCounter === +this.totalQuestions) {
+      this.router.transitionTo('/results');
+      return;
+    }
+    this.router.transitionTo(`/trivia/${this.questionCounter}`);
+  }
+
+  resetGame() {
+    this.questionCounter = 0;
+    this.questions = [];
+    this.correctAnswers = 0;
+    this.totalQuestions = 0;
   }
 }

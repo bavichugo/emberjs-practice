@@ -17,7 +17,7 @@ export default class TriviaFormComponent extends Component {
     const difficultyForAPI =
       this.difficulty === 'random' ? '' : `&difficulty=${this.difficulty}`;
     const api = `https://opentdb.com/api.php?amount=${this.numberOfQuestions}${difficultyForAPI}&type=multiple`;
-    await this.triviaData.setQuestions(api);
+    await this.triviaData.setQuestions(api, Number(this.numberOfQuestions));
     this.router.transitionTo('/trivia/0');
   }
 
