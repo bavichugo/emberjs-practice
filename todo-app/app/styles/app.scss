@@ -1,0 +1,17 @@
+@import './variables';
+@import './nav-bar';
+@import './log-in-screen';
+@import './todo-list';
+@import './todo-form';
+
+html, body {
+    margin: 0;
+    background-color: $black-ground;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    flex-direction: column;
+}

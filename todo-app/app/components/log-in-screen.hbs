@@ -1,0 +1,14 @@
+<div class='log-in-container'>
+  <form class='log-in-form column' {{on 'submit' this.logInHandler}}>
+    <h1>Todo App</h1>
+    <label for='email'>
+      Email
+      <Input id='email' type='text' @value={{this.email}} />
+    </label>
+    <label for='password'>
+      Password
+      <Input id='password' type='password' @value={{this.password}} />
+    </label>
+    <button type='submit'>Log In</button>
+  </form>
+</div>

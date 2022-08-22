@@ -1,0 +1,44 @@
+@import './variables';
+
+.nav-bar-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $cyan-ground;
+    margin: 0;
+}
+
+.nav-bar-inner-container {
+    background-color: $cyan-ground;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        margin: 0;
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: xx-large;
+    }
+
+    .sign-out {
+        background-color: $red;
+        border-radius: 5px;
+        font-weight: bold;
+        border-style: none;
+        padding: 0 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

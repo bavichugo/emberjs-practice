@@ -1,0 +1,9 @@
+<form class='todo-form' {{on 'submit' this.addTodoToList}}>
+  <Input
+    @value={{this.todo}}
+    value={{this.todo}}
+    type='text'
+    placeholder='Add new todo'
+  />
+  <button type='submit'>+</button>
+</form>

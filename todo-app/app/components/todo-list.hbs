@@ -1,0 +1,13 @@
+<div class='todo-list-container'>
+  <h1>Todo List:</h1>
+  <div class='todo-list-inner-container'>
+    <TodoForm />
+    <ul>
+      {{#each this.todoData.todoList as |todo|}}
+        <li>{{todo}}
+          <button value={{todo}} {{on 'click' this.removeTodo}}>Delete</button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

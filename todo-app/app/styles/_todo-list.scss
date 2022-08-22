@@ -1,0 +1,58 @@
+@import './variables';
+
+.todo-list-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $black-ground;
+    margin: 0;
+    color: $white;
+
+    .todo-list-inner-container {
+        background-color: $black-ground;
+        border-color: transparent $cyan-ground transparent $cyan-ground;
+        border-width: 3px;
+        border-style: solid;
+        width: 100%;
+        max-width: 1024px;
+        margin-top: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            width: 100%;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $white;
+                color: black;
+                border-radius: 5px;
+                font-size: large;
+                padding: 1rem;
+                margin-bottom: 1rem;
+
+                button {
+                    font-size: large;
+                    padding: 0.2rem 1rem;
+                    border-radius: 5px;
+                    border-style: none;
+                    background-color: rgb(179, 179, 179);
+
+                    &:hover {
+                        background-color: $red;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{{page-title @model.pageTitle}}
+
+{{#if @model.isLoggedIn}}
+  <NavBar />
+  <TodoList />
+{{else}}
+  <LogInScreen />
+{{/if}}
+
+{{outlet}}
